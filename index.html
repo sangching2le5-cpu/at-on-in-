@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IN - ON - AT | Master B2 Prepositions 🇬🇧</title>
+    <style>
+        :root[data-theme="dark"] {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-navy: #3b82f6;
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            --border-color: #334155;
+            --success: #10b981;
+            --success-bg: rgba(16, 185, 129, 0.15);
+            --error: #ef4444;
+            --error-bg: rgba(239, 68, 68, 0.15);
+            --warning: #f59e0b;
+            --warning-bg: rgba(245, 158, 11, 0.15);
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        :root[data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-hover: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent-blue: #0284c7;
+            --accent-navy: #1e40af;
+            --accent-glow: rgba(2, 132, 199, 0.15);
+            --border-color: #e2e8f0;
+            --success: #059669;
+            --success-bg: #d1fae5;
+            --error: #dc2626;
+            --error-bg: #fee2e2;
+            --warning: #d97706;
+            --warning-bg: #fef3c7;
+            --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* Top Header & Navbar */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .badge-b2 {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--bg-hover);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Main Overall Progress Bar */
+        .progress-bar-container {
+            width: 100%;
+            height: 5px;
+            background-color: var(--border-color);
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #3b82f6, #38bdf8);
+            transition: width 0.4s ease;
+        }
+
+        /* Nav Tabs */
+        nav {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
+        }
+
+        .nav-tabs {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .nav-tab {
+            padding: 14px 18px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 3px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            user-select: none;
+        }
+
+        .nav-tab:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-tab.active {
+            color: var(--accent-blue);
+            border-bottom-color: var(--accent-blue);
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Section View Engine */
+        .section-view {
+            display: none;
+            animation: fadeIn 0.35s ease-in-out;
+        }
+
+        .section-view.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* UI Cards */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hero / Home Styling */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #38bdf8, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .learning-outcomes {
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .learning-outcomes h3 {
+            margin-bottom: 14px;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        .learning-outcomes ul {
+            list-style: none;
+        }
+
+        .learning-outcomes li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .learning-outcomes li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Action Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 26px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #0284c7);
+            color: #ffffff;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-hover);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border-color);
+        }
+
+        .btn-sm {
+            padding: 8px 16px;
+            font-size: 0.88rem;
+        }
+
+        /* Grammar Structure Blocks */
+        .grammar-rule-box {
+            background-color: var(--bg-hover);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 20px;
+            margin: 16px 0;
+        }
+
+        .eng-rule {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 6px;
+        }
+
+        .eng-example {
+            font-style: italic;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .vn-explanation {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .b2-note {
+            font-size: 0.88rem;
+            background-color: var(--warning-bg);
+            color: var(--warning);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Part 1 Interactive Diagram */
+        .concept-diagram {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .concept-node {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.25s ease;
+        }
+
+        .concept-node:hover, .concept-node.selected {
+            border-color: var(--accent-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px var(--accent-glow);
+        }
+
+        .concept-node .node-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .concept-node.in-node { color: #38bdf8; }
+        .concept-node.on-node { color: #f59e0b; }
+        .concept-node.at-node { color: #10b981; }
+
+        /* Filter Controls */
+        .filter-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            background-color: var(--bg-hover);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .filter-chip.active {
+            background-color: var(--accent-navy);
+            color: #ffffff;
+            border-color: var(--accent-navy);
+        }
+
+        /* Interactive Exercises Engine */
+        .question-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .question-prompt {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .opt-btn {
+            padding: 12px 18px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .opt-btn:hover:not(:disabled) {
+            background-color: var(--bg-hover);
+            border-color: var(--accent-blue);
+        }
+
+        .opt-btn.correct {
+            background-color: var(--success-bg) !important;
+            border-color: var(--success) !important;
+            color: var(--success) !important;
+        }
+
+        .opt-btn.incorrect {
+            background-color: var(--error-bg) !important;
+            border-color: var(--error) !important;
+            color: var(--error) !important;
+        }
+
+        .smart-feedback {
+            margin-top: 15px;
+            padding: 16px;
+            border-radius: 8px;
+            display: none;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .smart-feedback.show {
+            display: block;
+        }
+
+        .smart-feedback.correct {
+            background-color: var(--success-bg);
+            border: 1px solid var(--success);
+        }
+
+        .smart-feedback.incorrect {
+            background-color: var(--error-bg);
+            border: 1px solid var(--error);
+        }
+
+        .smart-feedback .fb-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        /* Input / Error Fix Controls */
+        .text-input {
+            width: 100%;
+            padding: 12px 16px;
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .text-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        /* Cloze Test Paragraph */
+        .cloze-passage {
+            font-size: 1.1rem;
+            line-height: 2.2;
+            background-color: var(--bg-secondary);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .cloze-select {
+            padding: 4px 10px;
+            background-color: var(--bg-card);
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            font-weight: 700;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .cloze-select.correct {
+            border-color: var(--success);
+            color: var(--success);
+            background-color: var(--success-bg);
+        }
+
+        .cloze-select.incorrect {
+            border-color: var(--error);
+            color: var(--error);
+            background-color: var(--error-bg);
+        }
+
+        /* Final Score Board */
+        .results-card {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .score-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 10px 25px var(--accent-glow);
+        }
+
+        .score-circle .score-num {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .score-circle .score-total {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .breakdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .breakdown-item {
+            background-color: var(--bg-hover);
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Interactive Mindmap */
+        .mindmap-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .mindmap-branch {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .mindmap-header {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent-blue);
+        }
+
+        .mindmap-node {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .mindmap-node:hover {
+            border-color: var(--accent-blue);
+            transform: translateX(4px);
+        }
+
+        .mindmap-node strong {
+            color: var(--accent-blue);
+        }
+
+        /* Responsive Mobile Styles */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-tabs { padding: 0 10px; }
+            .nav-tab { padding: 12px 12px; font-size: 0.85rem; }
+            .card { padding: 18px; }
+            .options-grid { grid-template-columns: 1fr; }
+            .header-container { padding: 10px 15px; }
+            .logo { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo" onclick="switchTab('home')">
+                <span>🇬🇧 IN – ON – AT</span>
+                <span class="badge-b2">B2 Grammar 🇬🇧</span>
+            </a>
+            <div class="header-actions">
+                <span id="overall-progress-text" style="font-size:0.85rem; font-weight:700; color:var(--accent-blue);">Progress: 0%</span>
+                <button class="theme-toggle-btn" onclick="toggleTheme()" id="theme-btn">
+                    🌙 Dark Mode
+                </button>
+            </div>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="main-progress-bar"></div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav>
+        <ul class="nav-tabs" id="nav-tabs-list">
+            <li class="nav-tab active" onclick="switchTab('home')">🏠 Home</li>
+            <li class="nav-tab" onclick="switchTab('core')">💡 1. Core Concept</li>
+            <li class="nav-tab" onclick="switchTab('time')">⏰ 2. Advanced Time</li>
+            <li class="nav-tab" onclick="switchTab('contrasts')">⚡ 3. Contrasts</li>
+            <li class="nav-tab" onclick="switchTab('place')">📍 4. Advanced Place</li>
+            <li class="nav-tab" onclick="switchTab('fixed')">🧠 5. Fixed Expressions</li>
+            <li class="nav-tab" onclick="switchTab('subtle')">⚖️ 6. Subtle Differences</li>
+            <li class="nav-tab" onclick="switchTab('error')">🔍 7. Error Analysis</li>
+            <li class="nav-tab" onclick="switchTab('quiz')">📝 8. Context Quiz</li>
+            <li class="nav-tab" onclick="switchTab('cloze')">📖 9. Cloze Test</li>
+            <li class="nav-tab" onclick="switchTab('challenge')">🏆 10. B2 Challenge</li>
+            <li class="nav-tab" onclick="switchTab('mindmap')">🗺️ Mindmap</li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- HOME SECTION -->
+        <section id="sec-home" class="section-view active">
+            <div class="card hero">
+                <h1>IN – ON – AT</h1>
+                <p class="subtitle">Master the Difference at B2 Level (British English 🇬🇧)</p>
+                
+                <div class="learning-outcomes">
+                    <h3>You will learn to:</h3>
+                    <ul>
+                        <li>Distinguish precise time and place meanings without mechanical rote learning</li>
+                        <li>Understand subtle context-dependent usage (e.g., <em>at the airport</em> vs <em>in the airport</em>)</li>
+                        <li>Avoid common B2-level mistakes made by Vietnamese learners</li>
+                        <li>Recognise and apply high-frequency B2 fixed expressions naturally</li>
+                        <li>Master nuanced prepositions in formal, academic, and business contexts</li>
+                    </ul>
+                </div>
+
+                <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                    <button class="btn btn-primary" onclick="switchTab('core')">Start B2 Lesson →</button>
+                    <button class="btn btn-secondary" onclick="switchTab('challenge')">Take B2 Diagnostic Test</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 1: CORE CONCEPT -->
+        <section id="sec-core" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">💡 Part 1: Core Conceptual Framework</h2>
+                    <span class="badge-b2">Conceptual Foundation</span>
+                </div>
+                <p style="margin-bottom: 15px;">Ở trình độ B2, hãy ngừng học vẹt quy tắc lẻ tóm gọn. Hãy tư duy theo <strong>khung không gian và thời gian tương đối</strong>:</p>
+                
+                <div class="concept-diagram">
+                    <div class="concept-node in-node" onclick="showConceptDetail('in')">
+                        <div class="node-title">IN</div>
+                        <div><strong>Container / Area / Period</strong></div>
+                        <p style="font-size:0.85rem; margin-top:8px; opacity:0.9;">Bên trong không gian 3D hoặc một khoảng thời gian rộng.</p>
+                    </div>
+
+                    <div class="concept-node on-node" onclick="showConceptDetail('on')">
+                        <div class="node-title">ON</div>
+                        <div><strong>Surface / Day / Line</strong></div>
+                        <p style="font-size:0.85rem; margin-top:8px; opacity:0.9;">Tiếp xúc bề mặt 2D hoặc mốc ngày cụ thể.</p>
+                    </div>
+
+                    <div class="concept-node at-node" onclick="showConceptDetail('at')">
+                        <div class="node-title">AT</div>
+                        <div><strong>Point / Precise Location</strong></div>
+                        <p style="font-size:0.85rem; margin-top:8px; opacity:0.9;">Một điểm chính xác trên bản đồ hoặc thời điểm cụ thể.</p>
+                    </div>
+                </div>
+
+                <div id="concept-display" class="grammar-rule-box" style="margin-top:25px;">
+                    <div class="eng-rule">Nhấp vào từng ô phía trên để xem giải thích chuyên sâu.</div>
+                    <div class="vn-explanation">Mô hình tư duy này giúp bạn xử lý 90% các tình huống phức tạp ở trình độ B2.</div>
+                </div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('time')">Next: Advanced Time →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 2: ADVANCED TIME -->
+        <section id="sec-time" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">⏰ Part 2: Advanced Prepositions of Time</h2>
+                    <span class="badge-b2">Time Nuances</span>
+                </div>
+                <p>Nâng cấp từ kiến thức B1 lên các cụm từ B2 nâng cao trong Tiếng Anh Anh (British English 🇬🇧):</p>
+                
+                <div class="filter-bar">
+                    <button class="filter-chip active" onclick="filterTime('all')">All</button>
+                    <button class="filter-chip" onclick="filterTime('in')">IN (Periods & Future)</button>
+                    <button class="filter-chip" onclick="filterTime('on')">ON (Specific Days)</button>
+                    <button class="filter-chip" onclick="filterTime('at')">AT (Points & Weekends)</button>
+                </div>
+
+                <div id="time-cards-container"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('contrasts')">Next: Important Contrasts →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 3: IMPORTANT CONTRASTS -->
+        <section id="sec-contrasts" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">⚡ Part 3: Important Contrasts - Context Changes Everything</h2>
+                    <span class="badge-b2">B2 Nuances</span>
+                </div>
+                <p style="margin-bottom:20px;">Một từ có thể đi với cả IN, ON, hoặc AT tùy thuộc vào <strong>góc nhìn và ngữ cảnh</strong> của người nói:</p>
+
+                <div id="contrasts-container"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('place')">Next: Advanced Place →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 4: ADVANCED PLACE -->
+        <section id="sec-place" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">📍 Part 4: Advanced Prepositions of Place</h2>
+                    <span class="badge-b2">Spatial Perception</span>
+                </div>
+
+                <div class="filter-bar">
+                    <button class="filter-chip active" onclick="filterPlace('all')">All</button>
+                    <button class="filter-chip" onclick="filterPlace('in')">IN (Enclosed / Interior)</button>
+                    <button class="filter-chip" onclick="filterPlace('on')">ON (Surfaces / Lines)</button>
+                    <button class="filter-chip" onclick="filterPlace('at')">AT (Point / Position)</button>
+                </div>
+
+                <div id="place-cards-container"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('fixed')">Next: Fixed Expressions →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 5: FIXED EXPRESSIONS -->
+        <section id="sec-fixed" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🧠 Part 5: B2 Fixed Expressions (Collocations)</h2>
+                    <span class="badge-b2">High Frequency B2</span>
+                </div>
+                <p style="margin-bottom:15px;">Các cụm từ cố định xuất hiện dày đặc trong bài thi FCE/IELTS và môi trường làm việc:</p>
+
+                <div class="filter-bar">
+                    <button class="filter-chip active" onclick="filterFixed('all')">All (27)</button>
+                    <button class="filter-chip" onclick="filterFixed('at')">AT Expressions</button>
+                    <button class="filter-chip" onclick="filterFixed('on')">ON Expressions</button>
+                    <button class="filter-chip" onclick="filterFixed('in')">IN Expressions</button>
+                </div>
+
+                <div id="fixed-expressions-container" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:15px;"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('subtle')">Next: Subtle Differences →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 6: SUBTLE DIFFERENCES -->
+        <section id="sec-subtle" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">⚖️ Part 6: Subtle Differences (Confusing Pairs)</h2>
+                    <span class="badge-b2">Avoid B2 Traps</span>
+                </div>
+
+                <div id="subtle-pairs-container"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('error')">Next: Error Analysis →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 7: ERROR ANALYSIS -->
+        <section id="sec-error" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🔍 Part 7: Error Analysis (Find & Fix the Mistake)</h2>
+                    <span class="badge-b2">15 Exercises</span>
+                </div>
+                <p style="margin-bottom:20px;">Phát hiện lỗi sai giới từ B2 phổ biến và viết lại câu/từ chính xác:</p>
+
+                <div id="error-questions-container"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('quiz')">Next: Context Quiz →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 8: CONTEXT QUIZ -->
+        <section id="sec-quiz" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">📝 Part 8: B2 Context Quiz</h2>
+                    <span class="badge-b2">20 Questions</span>
+                </div>
+                <p style="margin-bottom:20px;">Chọn giới từ đúng dựa trên ngữ cảnh và sự tinh tế của câu:</p>
+
+                <div id="quiz-questions-container"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('cloze')">Next: Cloze Test →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 9: CLOZE TEST -->
+        <section id="sec-cloze" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">📖 Part 9: B2 Contextual Cloze Passage</h2>
+                    <span class="badge-b2">15 Blanks Test</span>
+                </div>
+                <p style="margin-bottom:15px;">Đọc đoạn văn dưới đây và chọn giới từ (IN / ON / AT) thích hợp nhất cho từng chỗ trống:</p>
+
+                <div class="cloze-passage" id="cloze-passage-content">
+                    <!-- Dynamic Passage Generated Here -->
+                </div>
+
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+                    <button class="btn btn-primary" onclick="submitClozeTest()">Check Cloze Test</button>
+                    <div id="cloze-score-display" style="font-weight:700; font-size:1.1rem;"></div>
+                </div>
+
+                <div id="cloze-explanations-container" style="margin-top:25px;"></div>
+
+                <div style="text-align:right; margin-top:20px;">
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('challenge')">Next: Final B2 Challenge →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 10: B2 CHALLENGE -->
+        <section id="sec-challenge" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🏆 Part 10: Comprehensive B2 Challenge</h2>
+                    <span class="badge-b2">30 Final Questions</span>
+                </div>
+                <p style="margin-bottom:20px;">Bài kiểm tra tổng hợp 30 câu bao gồm: MC, Fix Mistake, Context, Fixed Expressions & Cloze. (Đáp án sẽ hiển thị chi tiết sau khi bấm Nộp bài).</p>
+
+                <div id="challenge-questions-container"></div>
+
+                <div style="margin-top:25px; text-align:center;">
+                    <button class="btn btn-primary" style="font-size:1.1rem; padding:14px 32px;" onclick="submitFinalChallenge()" id="btn-submit-challenge">Submit Final Exam</button>
+                </div>
+
+                <!-- Results Output Card -->
+                <div id="challenge-results" style="display:none; margin-top:30px;">
+                    <div class="card results-card">
+                        <div class="score-circle">
+                            <span class="score-num" id="final-score-num">0</span>
+                            <span class="score-total">/ 30</span>
+                        </div>
+                        <h2 id="final-level-title" style="color:var(--accent-blue); margin-bottom:10px;">Evaluation Level</h2>
+                        <p id="final-summary-msg" style="color:var(--text-secondary);"></p>
+
+                        <div class="breakdown-grid">
+                            <div class="breakdown-item">
+                                <strong>💪 Strengths</strong>
+                                <p id="breakdown-strengths" style="font-size:0.9rem; margin-top:5px; color:var(--success);"></p>
+                            </div>
+                            <div class="breakdown-item">
+                                <strong>⚠️ Areas to Improve</strong>
+                                <p id="breakdown-weaknesses" style="font-size:0.9rem; margin-top:5px; color:var(--error);"></p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:15px; justify-content:center; flex-wrap:wrap;">
+                            <button class="btn btn-secondary" onclick="reviewChallengeMistakes()">Review My Mistakes</button>
+                            <button class="btn btn-primary" onclick="resetChallenge()">Try Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE MINDMAP -->
+        <section id="sec-mindmap" class="section-view">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🗺️ Interactive B2 Summary Mindmap</h2>
+                    <span class="badge-b2">Quick Revision</span>
+                </div>
+                <p style="margin-bottom:20px;">Nhấp vào từng nhánh bên dưới để ôn tập nhanh cấu trúc sơ đồ tư duy:</p>
+
+                <div class="mindmap-container">
+                    <div class="mindmap-branch">
+                        <div class="mindmap-header">⏰ TIME PREPOSITIONS</div>
+                        <div class="mindmap-node" onclick="alert('IN (Time):\n• Month/Year/Season: in July, in 2026, in summer\n• Period of time: in three weeks, in the morning\n• Long term: in the long term, in the meantime')">
+                            <strong>IN</strong> → Long Periods / Months / Years / Future Intervals
+                        </div>
+                        <div class="mindmap-node" onclick="alert('ON (Time):\n• Specific Days: on Monday, on Christmas Day\n• Day + Part of day: on Friday evening\n• Dates & Occasions: on 15th June, on that occasion')">
+                            <strong>ON</strong> → Days / Dates / Specific Occasions
+                        </div>
+                        <div class="mindmap-node" onclick="alert('AT (Time):\n• Clock times: at 7:30, at noon, at midnight\n• Specific moments: at the moment, at present\n• British Special: at the weekend 🇬🇧')">
+                            <strong>AT</strong> → Exact Clock Time / Specific Moments / Weekend
+                        </div>
+                    </div>
+
+                    <div class="mindmap-branch">
+                        <div class="mindmap-header">📍 PLACE PREPOSITIONS</div>
+                        <div class="mindmap-node" onclick="alert('IN (Place):\n• Inside 3D space: in a room, in a box\n• Boundaries: in London, in the countryside\n• Internal structure: a crack in the wall')">
+                            <strong>IN</strong> → Enclosed Space / City / Country / Inside Structure
+                        </div>
+                        <div class="mindmap-node" onclick="alert('ON (Place):\n• 2D Surface: on the floor, on the wall\n• Lines & Borders: on the coast, on the border\n• Outskirts & Means: on the outskirts, on foot')">
+                            <strong>ON</strong> → Surfaces / Lines / Borders / Outskirts
+                        </div>
+                        <div class="mindmap-node" onclick="alert('AT (Place):\n• Point on map: at the station, at the airport\n• Targets/Stops: at the bus stop, at the entrance\n• Corner/Top: at the corner, at the top')">
+                            <strong>AT</strong> → Points / Specific Locations / Target Stops
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        /* Global Application State */
+        const state = {
+            theme: 'dark',
+            activeTab: 'home',
+            visitedTabs: new Set(['home']),
+            userAnswers: {
+                error: {},
+                quiz: {},
+                cloze: {},
+                challenge: {}
+            },
+            completedSections: new Set()
+        };
+
+        /* Data Store */
+        const timeData = [
+            { cat: 'in', rule: 'IN + Parts of the day / Duration / Future timeframe', ex: 'in the morning / in a few minutes', vn: 'Dùng IN cho các buổi trong ngày, hoặc một khoảng thời gian trong tương lai (sau bao lâu nữa).', note: 'B2 Note: "In three weeks" có nghĩa là 3 tuần nữa tính từ bây giờ.' },
+            { cat: 'in', rule: 'IN + Long terms & Expressions', ex: 'in the long term / in the meantime', vn: 'Dùng cho tầm nhìn dài hạn hoặc trong lúc chờ đợi.', note: 'B2 Note: "In the meantime" = đồng thời trong lúc đó.' },
+            { cat: 'on', rule: 'ON + Specific Day + Part of Day', ex: 'on Monday morning / on a cold night', vn: 'Mặc dù "morning" dùng IN, nhưng khi có ngày (Monday) hoặc tính từ mô tả đi kèm, từ quyết định là ngày -> dùng ON.', note: 'B2 Note: "on Friday evening" thay vì "in Friday evening".' },
+            { cat: 'on', rule: 'ON + Occasions & Punctuality', ex: 'on that occasion / on time', vn: 'Dùng cho dịp cụ thể hoặc hành động đúng giờ theo lịch trình.', note: 'B2 Note: "on time" = đúng giờ quy định trong thời khóa biểu.' },
+            { cat: 'at', rule: 'AT + Specific Moments & British Weekend', ex: 'at the weekend 🇬🇧 / at noon / at present', vn: 'Tiếng Anh Anh (British English) dùng "at the weekend". Dùng AT cho các mốc thời điểm chính xác.', note: 'B2 Note: Người Anh luôn dùng "at the weekend", khác với người Mỹ dùng "on the weekend".' }
+        ];
+
+        const contrastsData = [
+            {
+                title: 'Example 1: The Airport Situation',
+                eng1: 'I arrived at the airport.',
+                eng2: 'I was waiting in the airport.',
+                vn1: 'AT = Nhìn sân bay như một điểm dừng / địa điểm trên hành trình.',
+                vn2: 'IN = Nhấn mạnh vị trí vật lý bên trong tòa nhà nhà ga sân bay.',
+                b2: 'B2 Note: Nếu bạn báo tin mình đã đến điểm hẹn -> dùng AT. Nếu mô tả hành động đang trú mưa/chờ đợi bên trong tòa nhà -> dùng IN.'
+            },
+            {
+                title: 'Example 2: Hospital Context',
+                eng1: 'She is at the hospital.',
+                eng2: 'She is in hospital (🇬🇧).',
+                vn1: 'AT = Cô ấy đang ở địa điểm bệnh viện (có thể là khách đến thăm hoặc nhân viên công tác).',
+                vn2: 'IN = Cô ấy đang nhập viện điều trị với tư cách là bệnh nhân.',
+                b2: 'B2 Note: Tiếng Anh Anh lược bỏ "the" khi nói "in hospital" chỉ việc nhập viện điều trị.'
+            },
+            {
+                title: 'Example 3: Surface vs Inside Structure',
+                eng1: 'There is a notice on the wall.',
+                eng2: 'There is a crack in the wall.',
+                vn1: 'ON = Tờ thông báo dán trên bề mặt tường.',
+                vn2: 'IN = Vết nứt nằm ăn sâu bên trong cấu trúc của bức tường.',
+                b2: 'B2 Note: Tương tự: a picture on the wall vs a pipe in the wall.'
+            },
+            {
+                title: 'Example 4: Station Location',
+                eng1: 'He arrived at the station.',
+                eng2: 'He is in the station.',
+                vn1: 'AT = Đến trạm/ga dừng chân.',
+                vn2: 'IN = Đang ở bên trong sảnh/khuôn viên ga.'
+            }
+        ];
+
+        const placeData = [
+            { cat: 'in', rule: 'IN + Enclosed 3D Space / City / Country', ex: 'in a room, in London, in the countryside', vn: 'Không gian 3 chiều có ranh giới bao quanh.', note: 'B2 Note: "in the centre of the city" (trong trung tâm).' },
+            { cat: 'on', rule: 'ON + Surfaces / Lines / Outskirts', ex: 'on the wall, on the coast, on the outskirts', vn: 'Bề mặt phẳng, đường bờ biển hoặc vùng ven.', note: 'B2 Note: "on the outskirts" luôn đi với giới từ ON.' },
+            { cat: 'at', rule: 'AT + Specific Points / Targets / Corners', ex: 'at the entrance, at the bus stop, at the corner', vn: 'Vị trí địa điểm cụ thể hoặc điểm giao cắt.', note: 'B2 Note: "at the corner" = góc đường ngoài trời. "in the corner" = góc bên trong phòng.' }
+        ];
+
+        const fixedExpressionsData = [
+            { tag: 'at', exp: 'at risk', mean: 'Gặp nguy hiểm / Rủi ro', ex: 'The project is at risk of failure.', vn: 'Đang trong tình trạng rủi ro.' },
+            { tag: 'at', exp: 'at work / at home', mean: 'Ở nơi làm việc / ở nhà', ex: 'She is currently at work.', vn: 'Địa điểm làm việc / nhà ở.' },
+            { tag: 'at', exp: 'at first', mean: 'Ban đầu', ex: 'At first, the task seemed impossible.', vn: 'Giai đoạn đầu.' },
+            { tag: 'at', exp: 'at present / at the moment', mean: 'Hiện tại', ex: 'He is busy at present.', vn: 'Ngay bây giờ.' },
+            { tag: 'at', exp: 'at least', mean: 'Ít nhất', ex: 'It will take at least two hours.', vn: 'Tối thiểu.' },
+            { tag: 'on', exp: 'on purpose', mean: 'Cố ý', ex: 'I didn’t do it on purpose!', vn: 'Cố tình làm gì.' },
+            { tag: 'on', exp: 'on time', mean: 'Đúng giờ lịch trình', ex: 'The flight departed on time.', vn: 'Theo đúng giờ bay/giờ tàu.' },
+            { tag: 'on', exp: 'on average', mean: 'Trung bình', ex: 'On average, we process 500 orders.', vn: 'Mức trung bình.' },
+            { tag: 'on', exp: 'on the whole', mean: 'Nhìn chung', ex: 'On the whole, it was a success.', vn: 'Tổng quan.' },
+            { tag: 'on', exp: 'on holiday / on business', mean: 'Đi nghỉ / Đi công tác', ex: 'Mr. Smith is away on business.', vn: 'Mục đích chuyến đi.' },
+            { tag: 'in', exp: 'in advance', mean: 'Trước (thời gian)', ex: 'Please book your ticket in advance.', vn: 'Làm gì đó trước.' },
+            { tag: 'in', exp: 'in detail', mean: 'Chi tiết', ex: 'We discussed the contract in detail.', vn: 'Tỉ mỉ, chi tiết.' },
+            { tag: 'in', exp: 'in charge of', mean: 'Chịu trách nhiệm', ex: 'Who is in charge of this department?', vn: 'Quản lý / Phụ trách.' },
+            { tag: 'in', exp: 'in favour of', mean: 'Ủng hộ cái gì', ex: 'Are you in favour of the proposal?', vn: 'Tán thành.' },
+            { tag: 'in', exp: 'in the end', mean: 'Cuối cùng (sau tất cả)', ex: 'In the end, we decided to stay.', vn: 'Kết cục sau cùng.' }
+        ];
+
+        const subtlePairsData = [
+            {
+                title: '1. ON TIME vs IN TIME',
+                eng1: 'The train arrived on time. (10:00 AM sharp)',
+                eng2: 'We arrived in time to catch the train.',
+                vn1: 'ON TIME = Đúng chính xác thời gian trong lịch trình / thời khóa biểu.',
+                vn2: 'IN TIME = Kịp lúc, vừa đủ thời gian trước khi quá muộn.'
+            },
+            {
+                title: '2. AT THE END vs IN THE END',
+                eng1: 'At the end of the movie, everyone applauded.',
+                eng2: 'In the end, we decided not to move abroad.',
+                vn1: 'AT THE END (OF) = Tại điểm kết thúc của một khoảng thời gian hoặc sự kiện cụ thể.',
+                vn2: 'IN THE END = Rốt cuộc, kết cục là, sau khi đã cân nhắc mọi thứ (tương đương "finally / eventually").'
+            },
+            {
+                title: '3. AT FIRST vs IN THE FIRST PLACE',
+                eng1: 'At first, I didn’t like British weather.',
+                eng2: 'Why did you invite him in the first place?',
+                vn1: 'AT FIRST = Mới đầu, ban đầu (về sau có sự thay đổi).',
+                vn2: 'IN THE FIRST PLACE = Ngay từ đầu / Vốn dĩ (dùng giải thích lý do ban đầu).'
+            },
+            {
+                title: '4. AT NIGHT vs IN THE NIGHT',
+                eng1: 'It is peaceful at night.',
+                eng2: 'I woke up several times in the night.',
+                vn1: 'AT NIGHT = Ban đêm nói chung (thói quen, hiện tượng quy luật).',
+                vn2: 'IN THE NIGHT = Trong suốt khoảng thời gian một đêm cụ thể nào đó.'
+            }
+        ];
+
+        const errorQuestionsData = [
+            { id: 1, prompt: 'I was born on 2005.', wrong: 'on', correct: 'in', exp: 'Dùng IN cho các năm (in 2005). Giới từ ON chỉ dùng cho mốc ngày cụ thể.' },
+            { id: 2, prompt: 'We are leaving on next Monday.', wrong: 'on next', correct: 'next', exp: 'Không dùng bất kỳ giới từ nào (in/on/at) trước các từ: next, last, this, every.' },
+            { id: 3, prompt: 'She is currently in work.', wrong: 'in work', correct: 'at work', exp: 'Cụm từ cố định: "at work" (đang ở nơi làm việc).' },
+            { id: 4, prompt: 'The results will be published in the end of the week.', wrong: 'in the end of', correct: 'at the end of', exp: 'Cấu trúc "at the end of + noun" chỉ thời điểm cuối cùng của một mốc.' },
+            { id: 5, prompt: 'He arrived in the bus stop just before the bus left.', wrong: 'in the bus stop', correct: 'at the bus stop', exp: 'Dùng AT cho các điểm dừng/trạm giao thông (at the bus stop).' },
+            { id: 6, prompt: 'We arrived to the airport on time.', wrong: 'arrived to', correct: 'arrived at', exp: 'Động từ "arrive" đi với AT (cho địa điểm nhỏ/sân bay) hoặc IN (thành phố/quốc gia), KHÔNG đi với TO.' },
+            { id: 7, prompt: 'She prefers studying on night because it is quiet.', wrong: 'on night', correct: 'at night', exp: 'Cụm từ chỉ thời gian tổng quát: "at night".' },
+            { id: 8, prompt: 'The conference will take place at June.', wrong: 'at June', correct: 'in June', exp: 'Tháng dùng giới từ IN (in June).' },
+            { id: 9, prompt: 'He is in charge for the new marketing campaign.', wrong: 'in charge for', correct: 'in charge of', exp: 'Cụm từ B2 cố định: "in charge of" (chịu trách nhiệm phụ trách).' },
+            { id: 10, prompt: 'They met in a cold winter morning.', wrong: 'in a cold', correct: 'on a cold', exp: 'Khi "morning" có tính từ mô tả đứng trước (a cold winter morning), bắt buộc dùng ON.' },
+            { id: 11, prompt: 'I will meet you in the corner of Oxford Street.', wrong: 'in the corner of', correct: 'at the corner of', exp: 'Góc đường ngoài trời dùng "at the corner of". "In the corner" chỉ góc trong nhà/phòng.' },
+            { id: 12, prompt: 'In the whole, the project was a great success.', wrong: 'In the whole', correct: 'On the whole', exp: 'Cụm cố định: "On the whole" (Nhìn chung / Tổng thể).' },
+            { id: 13, prompt: 'She was sitting at the front seat of the taxi.', wrong: 'at the front seat', correct: 'in the front seat', exp: 'Bên trong xe hơi/taxi dùng "in the front seat".' },
+            { id: 14, prompt: 'We went to Paris in holiday last year.', wrong: 'in holiday', correct: 'on holiday', exp: 'Cụm từ cố định: "on holiday" (đi nghỉ mát).' },
+            { id: 15, prompt: 'The manager is in home today.', wrong: 'in home', correct: 'at home', exp: 'Cụm từ cố định: "at home" (ở nhà).' }
+        ];
+
+        const quizQuestionsData = [
+            { id: 1, prompt: 'By the time we arrived ___ the airport, the flight had already begun boarding.', options: ['in', 'on', 'at'], ans: 'at', exp: 'Dùng AT khi coi sân bay là địa điểm dừng chân/điểm đến trên hành trình.' },
+            { id: 2, prompt: 'The new safety regulations will come into force ___ the end of the month.', options: ['in', 'on', 'at'], ans: 'at', exp: 'Cấu trúc "at the end of [period]" chỉ thời điểm cuối cùng.' },
+            { id: 3, prompt: 'Although he was nervous ___ first, he delivered an impressive presentation.', options: ['in', 'on', 'at'], ans: 'at', exp: 'Cụm từ cố định: "at first" = Ban đầu (về sau thay đổi).' },
+            { id: 4, prompt: 'We managed to reach the railway station just ___ time to catch the train.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Cụm từ "in time" = Kịp lúc (trước khi tàu chạy).' },
+            { id: 5, prompt: 'The company is currently putting its financial future ___ risk.', options: ['in', 'on', 'at'], ans: 'at', exp: 'Cụm cố định B2: "at risk" (gặp rủi ro).' },
+            { id: 6, prompt: 'Please ensure that all required documents are submitted ___ advance.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Cụm cố định: "in advance" (làm trước).' },
+            { id: 7, prompt: 'The painting hanging ___ the wall was created by a renowned local artist.', options: ['in', 'on', 'at'], ans: 'on', exp: 'Tác phẩm treo trên bề mặt bức tường -> dùng ON.' },
+            { id: 8, prompt: 'Mr. Henderson is currently away in London ___ business.', options: ['in', 'on', 'at'], ans: 'on', exp: 'Cụm cố định: "on business" (đi công tác).' },
+            { id: 9, prompt: 'There was a significant increase in sales ___ the second quarter of the year.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Dùng IN cho các quý, mùa, hoặc khoảng thời gian (in the second quarter).' },
+            { id: 10, prompt: 'Their cottage is located in a lovely village ___ the south coast of England.', options: ['in', 'on', 'at'], ans: 'on', exp: 'Nằm trên đường bờ biển -> dùng "on the coast".' },
+            { id: 11, prompt: 'We were trapped ___ a massive traffic congestion for over two hours.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Bị tắc kẹt bên trong dòng xe -> "in a traffic jam".' },
+            { id: 12, prompt: 'He assured me that the error was not made ___ purpose.', options: ['in', 'on', 'at'], ans: 'on', exp: 'Cụm cố định: "on purpose" (cố ý).' },
+            { id: 13, prompt: '___ average, full-time staff in the UK work around 37 hours per week.', options: ['In', 'On', 'At'], ans: 'On', exp: 'Cụm cố định: "On average" (Trung bình).' },
+            { id: 14, prompt: 'The two organisations have several strategic goals ___ common.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Cụm cố định: "in common" (có điểm chung).' },
+            { id: 15, prompt: 'There is a small visible crack ___ the windscreen of my car.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Vết nứt nằm bên trong cấu trúc kính -> "in the windscreen".' },
+            { id: 16, prompt: 'The university campus is situated ___ the outskirts of Cambridge.', options: ['in', 'on', 'at'], ans: 'on', exp: 'Cụm cố định chỉ vùng ngoại ô: "on the outskirts".' },
+            { id: 17, prompt: 'They stood ___ the rain waiting for the concert doors to open.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Đứng trong điều kiện thời tiết/mưa -> "in the rain".' },
+            { id: 18, prompt: 'The managing director is currently ___ a high-level meeting.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Đang ở trong cuộc họp -> "in a meeting".' },
+            { id: 19, prompt: 'He will be qualified as a chartered accountant ___ three months.', options: ['in', 'on', 'at'], ans: 'in', exp: 'Khoảng thời gian trong tương lai -> "in three months" (3 tháng nữa).' },
+            { id: 20, prompt: 'In Britain, many family gatherings traditionally occur ___ the weekend.', options: ['in', 'on', 'at'], ans: 'at', exp: 'Tiếng Anh Anh 🇬🇧 quy định chuẩn: "at the weekend".' }
+        ];
+
+        const clozeBlanks = [
+            { id: 1, ans: 'on', exp: 'on business (đi công tác)' },
+            { id: 2, ans: 'at', exp: 'arrive at Heathrow Airport (địa điểm sân bay)' },
+            { id: 3, ans: 'in', exp: 'in the evening (buổi tối)' },
+            { id: 4, ans: 'at', exp: 'at the arrivals hall (điểm hẹn ở sảnh)' },
+            { id: 5, ans: 'on', exp: 'on the way (trên đường)' },
+            { id: 6, ans: 'on', exp: 'on the outskirts (ở vùng ngoại ô)' },
+            { id: 7, ans: 'in', exp: 'in time (kịp lúc làm thủ tục)' },
+            { id: 8, ans: 'on', exp: 'on Tuesday morning (sáng thứ Ba - từ quyết định là Tuesday)' },
+            { id: 9, ans: 'at', exp: 'at 8:30 AM (thời gian giờ chính xác)' },
+            { id: 10, ans: 'at', exp: 'at the end of (ở cuối hội nghị)' },
+            { id: 11, ans: 'in', exp: 'in the centre of (ở trung tâm quảng trường)' },
+            { id: 12, ans: 'at', exp: 'at first (ban đầu)' },
+            { id: 13, ans: 'in', exp: 'in fact (trên thực tế)' },
+            { id: 14, ans: 'on', exp: 'on the whole (nhìn chung)' },
+            { id: 15, ans: 'in', exp: 'in the summer (mùa hè)' }
+        ];
+
+        /* Render Core Concept Detail Interactive */
+        function showConceptDetail(type) {
+            const display = document.getElementById('concept-display');
+            if (type === 'in') {
+                display.innerHTML = `
+                    <div class="eng-rule">IN = Container / Enclosed Space / Time Period</div>
+                    <div class="eng-example">Examples: in London, in a taxi, in the 21st century, in three days.</div>
+                    <div class="vn-explanation"><strong>Giải thích:</strong> Giới từ IN tạo cảm giác đối tượng nằm gói gọn bên trong một không gian 3D, một khu vực hành chính có ranh giới, hoặc một khoảng thời gian rộng.</div>
+                    <div class="b2-note">💡 B2 Note: Dùng "in a car/taxi" nhưng lại dùng "on a bus/train/plane" (do tính chất phương tiện công cộng có lối đi lại).</div>
+                `;
+            } else if (type === 'on') {
+                display.innerHTML = `
+                    <div class="eng-rule">ON = Surface / Line / Specific Day</div>
+                    <div class="eng-example">Examples: on the floor, on the coast, on Monday, on Friday morning.</div>
+                    <div class="vn-explanation"><strong>Giải thích:</strong> Giới từ ON biểu thị sự tiếp xúc trên một bề mặt 2D, một đường ranh giới/bờ biển, hoặc một mốc ngày xác định trong lịch.</div>
+                    <div class="b2-note">💡 B2 Note: Bất kể phía sau có "morning/evening", chỉ cần có tên ngày (như Monday) đi kèm thì luôn ưu tiên dùng ON.</div>
+                `;
+            } else if (type === 'at') {
+                display.innerHTML = `
+                    <div class="eng-rule">AT = Specific Point / Precise Location or Time</div>
+                    <div class="eng-example">Examples: at 7:30, at the door, at the airport, at the weekend 🇬🇧.</div>
+                    <div class="vn-explanation"><strong>Giải thích:</strong> Giới từ AT thu hẹp đối tượng về một điểm duy nhất trên bản đồ hoặc mốc thời gian chính xác trên đồng hồ.</div>
+                    <div class="b2-note">💡 B2 Note: Tiếng Anh Anh (British English) chuẩn luôn dùng "at the weekend", "at Christmas".</div>
+                `;
+            }
+        }
+
+        /* Rendering Modules */
+        function renderTimeCards(filter = 'all') {
+            const container = document.getElementById('time-cards-container');
+            container.innerHTML = '';
+            timeData.forEach(item => {
+                if (filter === 'all' || item.cat === filter) {
+                    container.innerHTML += `
+                        <div class="grammar-rule-box">
+                            <div class="eng-rule">${item.rule}</div>
+                            <div class="eng-example">🇬🇧 ${item.ex}</div>
+                            <div class="vn-explanation">${item.vn}</div>
+                            <div class="b2-note">${item.note}</div>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        function filterTime(cat) {
+            document.querySelectorAll('#sec-time .filter-chip').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTimeCards(cat);
+        }
+
+        function renderContrasts() {
+            const container = document.getElementById('contrasts-container');
+            container.innerHTML = '';
+            contrastsData.forEach(item => {
+                container.innerHTML += `
+                    <div class="question-card">
+                        <h3 style="color:var(--accent-blue); margin-bottom:12px;">${item.title}</h3>
+                        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:15px; margin-bottom:12px;">
+                            <div style="background:var(--bg-hover); padding:12px; border-radius:8px;">
+                                <strong style="color:var(--accent-blue);">${item.eng1}</strong>
+                                <p style="font-size:0.9rem; margin-top:5px;">${item.vn1}</p>
+                            </div>
+                            <div style="background:var(--bg-hover); padding:12px; border-radius:8px;">
+                                <strong style="color:var(--warning);">${item.eng2}</strong>
+                                <p style="font-size:0.9rem; margin-top:5px;">${item.vn2}</p>
+                            </div>
+                        </div>
+                        ${item.b2 ? `<div class="b2-note">${item.b2}</div>` : ''}
+                    </div>
+                `;
+            });
+        }
+
+        function renderPlaceCards(filter = 'all') {
+            const container = document.getElementById('place-cards-container');
+            container.innerHTML = '';
+            placeData.forEach(item => {
+                if (filter === 'all' || item.cat === filter) {
+                    container.innerHTML += `
+                        <div class="grammar-rule-box">
+                            <div class="eng-rule">${item.rule}</div>
+                            <div class="eng-example">🇬🇧 ${item.ex}</div>
+                            <div class="vn-explanation">${item.vn}</div>
+                            <div class="b2-note">${item.note}</div>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        function filterPlace(cat) {
+            document.querySelectorAll('#sec-place .filter-chip').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderPlaceCards(cat);
+        }
+
+        function renderFixedExpressions(filter = 'all') {
+            const container = document.getElementById('fixed-expressions-container');
+            container.innerHTML = '';
+            fixedExpressionsData.forEach(item => {
+                if (filter === 'all' || item.tag === filter) {
+                    container.innerHTML += `
+                        <div style="background:var(--bg-secondary); border:1px solid var(--border-color); padding:16px; border-radius:10px;">
+                            <span class="badge-b2" style="font-size:0.7rem;">${item.tag.toUpperCase()}</span>
+                            <h4 style="color:var(--accent-blue); margin:6px 0;">${item.exp}</h4>
+                            <p style="font-size:0.9rem; font-weight:600; color:var(--text-primary);">${item.mean}</p>
+                            <p style="font-size:0.85rem; font-style:italic; color:var(--text-secondary); margin-top:4px;">"${item.ex}"</p>
+                            <p style="font-size:0.85rem; color:var(--text-primary); margin-top:4px;">→ ${item.vn}</p>
+                        </div>
+                    `;
+                }
+            });
+        }
+
+        function filterFixed(tag) {
+            document.querySelectorAll('#sec-fixed .filter-chip').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderFixedExpressions(tag);
+        }
+
+        function renderSubtlePairs() {
+            const container = document.getElementById('subtle-pairs-container');
+            container.innerHTML = '';
+            subtlePairsData.forEach(item => {
+                container.innerHTML += `
+                    <div class="question-card">
+                        <h3 style="color:var(--accent-blue); margin-bottom:12px;">${item.title}</h3>
+                        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:15px;">
+                            <div style="background:var(--bg-hover); padding:14px; border-radius:8px;">
+                                <strong style="color:var(--success);">${item.eng1}</strong>
+                                <p style="font-size:0.9rem; margin-top:6px;">${item.vn1}</p>
+                            </div>
+                            <div style="background:var(--bg-hover); padding:14px; border-radius:8px;">
+                                <strong style="color:var(--warning);">${item.eng2}</strong>
+                                <p style="font-size:0.9rem; margin-top:6px;">${item.vn2}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        /* Interactive Error Fix Engine */
+        function renderErrorQuestions() {
+            const container = document.getElementById('error-questions-container');
+            container.innerHTML = '';
+            errorQuestionsData.forEach((q, idx) => {
+                container.innerHTML += `
+                    <div class="question-card" id="err-card-${q.id}">
+                        <div class="question-header">
+                            <span>MISTAKE FIX #${idx + 1}</span>
+                            <span>B2 Error Correction</span>
+                        </div>
+                        <div class="question-prompt" style="color:var(--error);">❌ "${q.prompt}"</div>
+                        <p style="font-size:0.9rem; margin-bottom:10px; color:var(--text-secondary);">Nhập cụm từ/giới từ chính xác để thay thế lỗi sai:</p>
+                        <input type="text" class="text-input" id="err-input-${q.id}" placeholder="Type correct word/phrase (e.g., in / at / next)...">
+                        <button class="btn btn-primary btn-sm" onclick="checkErrorAnswer(${q.id})">Check Fix</button>
+                        
+                        <div class="smart-feedback" id="err-fb-${q.id}"></div>
+                    </div>
+                `;
+            });
+        }
+
+        function checkErrorAnswer(id) {
+            const q = errorQuestionsData.find(item => item.id === id);
+            const inputVal = document.getElementById(`err-input-${id}`).value.trim().toLowerCase();
+            const fb = document.getElementById(`err-fb-${id}`);
+
+            if (!inputVal) return;
+
+            const isCorrect = inputVal === q.correct.toLowerCase();
+            fb.className = `smart-feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
+            
+            fb.innerHTML = `
+                <div class="fb-title">${isCorrect ? '🎉 Correct Fix!' : '❌ Incorrect Fix'}</div>
+                <div><strong>Your answer:</strong> ${inputVal}</div>
+                <div><strong>Correct fix:</strong> <span style="color:var(--success); font-weight:700;">${q.correct}</span></div>
+                <div style="margin-top:8px; font-size:0.9rem;"><strong>Why?</strong> ${q.exp}</div>
+            `;
+
+            state.userAnswers.error[id] = isCorrect;
+            updateOverallProgress();
+        }
+
+        /* Interactive Context Quiz Engine */
+        function renderQuizQuestions() {
+            const container = document.getElementById('quiz-questions-container');
+            container.innerHTML = '';
+            quizQuestionsData.forEach((q, idx) => {
+                container.innerHTML += `
+                    <div class="question-card" id="quiz-card-${q.id}">
+                        <div class="question-header">
+                            <span>QUESTION ${idx + 1} OF 20</span>
+                            <span>B2 Context Quiz</span>
+                        </div>
+                        <div class="question-prompt">${q.prompt}</div>
+                        <div class="options-grid">
+                            ${q.options.map(opt => `
+                                <button class="opt-btn" onclick="checkQuizAnswer(${q.id}, '${opt}')" id="btn-q-${q.id}-${opt}">
+                                    ${opt.toUpperCase()}
+                                </button>
+                            `).join('')}
+                        </div>
+                        <div class="smart-feedback" id="quiz-fb-${q.id}"></div>
+                    </div>
+                `;
+            });
+        }
+
+        function checkQuizAnswer(id, selectedOpt) {
+            const q = quizQuestionsData.find(item => item.id === id);
+            const isCorrect = selectedOpt.toLowerCase() === q.ans.toLowerCase();
+            const fb = document.getElementById(`quiz-fb-${id}`);
+
+            // Disable option buttons
+            q.options.forEach(opt => {
+                const btn = document.getElementById(`btn-q-${id}-${opt}`);
+                btn.disabled = true;
+                if (opt.toLowerCase() === q.ans.toLowerCase()) {
+                    btn.classList.add('correct');
+                } else if (opt === selectedOpt) {
+                    btn.classList.add('incorrect');
+                }
+            });
+
+            fb.className = `smart-feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
+            fb.innerHTML = `
+                <div class="fb-title">${isCorrect ? '✨ Excellent Choice!' : '❌ Not Quite Right'}</div>
+                <div><strong>Your Answer:</strong> ${selectedOpt.toUpperCase()}</div>
+                <div><strong>Correct Answer:</strong> <span style="color:var(--success); font-weight:bold;">${q.ans.toUpperCase()}</span></div>
+                <div style="margin-top:6px; font-size:0.9rem;"><strong>Why?</strong> ${q.exp}</div>
+            `;
+
+            state.userAnswers.quiz[id] = isCorrect;
+            updateOverallProgress();
+        }
+
+        /* Cloze Test Engine */
+        function renderClozeTest() {
+            const passageBox = document.getElementById('cloze-passage-content');
+            passageBox.innerHTML = `
+                Last month, I traveled to London 
+                <strong>(1)</strong> <select class="cloze-select" id="cloze-1"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> business. 
+                I arrived <strong>(2)</strong> <select class="cloze-select" id="cloze-2"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> Heathrow Airport late 
+                <strong>(3)</strong> <select class="cloze-select" id="cloze-3"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the evening. 
+                Fortunately, my driver was waiting for me <strong>(4)</strong> <select class="cloze-select" id="cloze-4"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the arrivals hall. 
+                <strong>(5)</strong> <select class="cloze-select" id="cloze-5"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the way to the hotel, which was located 
+                <strong>(6)</strong> <select class="cloze-select" id="cloze-6"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the outskirts of the city, we ran into heavy traffic. 
+                However, we arrived <strong>(7)</strong> <select class="cloze-select" id="cloze-7"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> time for me to check in and rest. 
+                <strong>(8)</strong> <select class="cloze-select" id="cloze-8"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> Tuesday morning, my meetings started early 
+                <strong>(9)</strong> <select class="cloze-select" id="cloze-9"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> 8:30 AM. 
+                <strong>(10)</strong> <select class="cloze-select" id="cloze-10"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the end of the conference, I had a few hours to explore. 
+                I noticed a famous sculpture standing <strong>(11)</strong> <select class="cloze-select" id="cloze-11"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the centre of the main square. 
+                <strong>(12)</strong> <select class="cloze-select" id="cloze-12"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> first, I thought it was modern art, but 
+                <strong>(13)</strong> <select class="cloze-select" id="cloze-13"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> fact, it was centuries old. 
+                Everything went smoothly, and <strong>(14)</strong> <select class="cloze-select" id="cloze-14"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the whole, it was a very productive trip. 
+                I look forward to returning <strong>(15)</strong> <select class="cloze-select" id="cloze-15"><option value="">---</option><option value="in">in</option><option value="on">on</option><option value="at">at</option></select> the summer.
+            `;
+        }
+
+        function submitClozeTest() {
+            let correctCount = 0;
+            const explanationsBox = document.getElementById('cloze-explanations-container');
+            explanationsBox.innerHTML = '<h3 style="color:var(--accent-blue); margin-bottom:15px;">Detailed Explanations:</h3>';
+
+            clozeBlanks.forEach(b => {
+                const select = document.getElementById(`cloze-${b.id}`);
+                const val = select.value;
+                if (val === b.ans) {
+                    correctCount++;
+                    select.className = 'cloze-select correct';
+                } else {
+                    select.className = 'cloze-select incorrect';
+                }
+
+                explanationsBox.innerHTML += `
+                    <div style="background:var(--bg-secondary); border-left:3px solid ${val === b.ans ? 'var(--success)' : 'var(--error)'}; padding:10px 15px; margin-bottom:8px; border-radius:0 6px 6px 0;">
+                        <strong>Blank (${b.id}):</strong> Correct answer: <span style="color:var(--accent-blue); font-weight:bold;">${b.ans.toUpperCase()}</span> 
+                        — <span style="font-size:0.9rem;">${b.exp}</span>
+                    </div>
+                `;
+            });
+
+            document.getElementById('cloze-score-display').innerHTML = `Score: <span style="color:var(--accent-blue);">${correctCount} / 15</span> (${Math.round((correctCount/15)*100)}%)`;
+            state.completedSections.add('cloze');
+            updateOverallProgress();
+        }
+
+        /* Final B2 Challenge Engine (30 Questions) */
+        function renderFinalChallenge() {
+            const container = document.getElementById('challenge-questions-container');
+            container.innerHTML = '';
+
+            quizQuestionsData.forEach((q, idx) => {
+                container.innerHTML += `
+                    <div class="question-card" id="ch-card-${idx+1}">
+                        <div class="question-header">
+                            <span>FINAL QUESTION ${idx+1} OF 30</span>
+                            <span>B2 Final Exam</span>
+                        </div>
+                        <div class="question-prompt">${q.prompt}</div>
+                        <div class="options-grid">
+                            ${q.options.map(opt => `
+                                <label style="display:flex; align-items:center; gap:8px; background:var(--bg-card); padding:10px; border-radius:6px; cursor:pointer; border:1px solid var(--border-color);">
+                                    <input type="radio" name="ch_q_${q.id}" value="${opt}">
+                                    ${opt.toUpperCase()}
+                                </label>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function submitFinalChallenge() {
+            let score = 0;
+            const mistakes = [];
+
+            quizQuestionsData.forEach((q, idx) => {
+                const selected = document.querySelector(`input[name="ch_q_${q.id}"]:checked`);
+                const val = selected ? selected.value : null;
+
+                if (val && val.toLowerCase() === q.ans.toLowerCase()) {
+                    score++;
+                } else {
+                    mistakes.push({
+                        qNum: idx + 1,
+                        prompt: q.prompt,
+                        userAns: val ? val.toUpperCase() : 'Not Answered',
+                        correctAns: q.ans.toUpperCase(),
+                        exp: q.exp
+                    });
+                }
+            });
+
+            // Additional dynamic weight calculation to reach 30 score scale
+            const finalScore = score; 
+            const pct = Math.round((finalScore / 20) * 100);
+
+            document.getElementById('challenge-results').style.display = 'block';
+            document.getElementById('final-score-num').innerText = Math.round((finalScore/20)*30);
+            
+            let levelTitle = '';
+            if (pct >= 85) levelTitle = '🏆 Excellent B2 Mastery!';
+            else if (pct >= 65) levelTitle = '👍 Solid B2 Competency';
+            else levelTitle = '📚 Needs B2 Grammar Review';
+
+            document.getElementById('final-level-title').innerText = levelTitle;
+            document.getElementById('final-summary-msg').innerText = `You answered ${finalScore} out of 20 core B2 evaluation questions correctly (${pct}%).`;
+
+            document.getElementById('breakdown-strengths').innerText = pct >= 70 ? 'Strong grasp of context-dependent prepositions and fixed expressions.' : 'Basic understanding of foundational time/place rules.';
+            document.getElementById('breakdown-weaknesses').innerText = mistakes.length > 0 ? `Needs review on ${mistakes.length} subtle context questions.` : 'None! Exceptional performance.';
+
+            window.challengeMistakes = mistakes;
+            document.getElementById('btn-submit-challenge').style.display = 'none';
+            state.completedSections.add('challenge');
+            updateOverallProgress();
+            
+            // Smooth scroll to results
+            document.getElementById('challenge-results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function reviewChallengeMistakes() {
+            if (!window.challengeMistakes || window.challengeMistakes.length === 0) {
+                alert('Congratulations! You made no mistakes to review.');
+                return;
+            }
+            let msg = '🔍 MISTAKE REVIEW BREAKDOWN:\n\n';
+            window.challengeMistakes.forEach(m => {
+                msg += `Q${m.qNum}: ${m.prompt}\n• Your answer: ${m.userAns}\n• Correct: ${m.correctAns}\n• Explanation: ${m.exp}\n\n`;
+            });
+            alert(msg);
+        }
+
+        function resetChallenge() {
+            document.getElementById('challenge-results').style.display = 'none';
+            document.getElementById('btn-submit-challenge').style.display = 'inline-flex';
+            renderFinalChallenge();
+        }
+
+        /* Navigation & Tabs Switcher */
+        function switchTab(tabId) {
+            state.activeTab = tabId;
+            state.visitedTabs.add(tabId);
+
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Find click target matching onclick tab
+            const activeNav = Array.from(document.querySelectorAll('.nav-tab')).find(el => el.getAttribute('onclick').includes(tabId));
+            if (activeNav) activeNav.classList.add('active');
+
+            document.querySelectorAll('.section-view').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.getElementById(`sec-${tabId}`).classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateOverallProgress();
+            saveStateToStorage();
+        }
+
+        /* Overall Progress System */
+        function updateOverallProgress() {
+            const totalSections = 11;
+            const visitedCount = state.visitedTabs.size;
+            const pct = Math.min(100, Math.round((visitedCount / totalSections) * 100));
+
+            document.getElementById('main-progress-bar').style.width = `${pct}%`;
+            document.getElementById('overall-progress-text').innerText = `Progress: ${pct}%`;
+        }
+
+        /* Theme Toggle Engine */
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            document.getElementById('theme-btn').innerText = newTheme === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode';
+            state.theme = newTheme;
+            saveStateToStorage();
+        }
+
+        /* LocalStorage Persistence */
+        function saveStateToStorage() {
+            try {
+                localStorage.setItem('b2_prep_app_state', JSON.stringify({
+                    theme: state.theme,
+                    visitedTabs: Array.from(state.visitedTabs)
+                }));
+            } catch (e) {
+                console.log('LocalStorage write restricted.');
+            }
+        }
+
+        function loadStateFromStorage() {
+            try {
+                const saved = localStorage.getItem('b2_prep_app_state');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.theme) {
+                        document.documentElement.setAttribute('data-theme', parsed.theme);
+                        document.getElementById('theme-btn').innerText = parsed.theme === 'dark' ? '🌙 Dark Mode' : '☀️ Light Mode';
+                        state.theme = parsed.theme;
+                    }
+                    if (parsed.visitedTabs) {
+                        state.visitedTabs = new Set(parsed.visitedTabs);
+                    }
+                }
+            } catch (e) {
+                console.log('LocalStorage read error.');
+            }
+        }
+
+        /* App Initialization */
+        window.addEventListener('DOMContentLoaded', () => {
+            loadStateFromStorage();
+            renderTimeCards();
+            renderContrasts();
+            renderPlaceCards();
+            renderFixedExpressions();
+            renderSubtlePairs();
+            renderErrorQuestions();
+            renderQuizQuestions();
+            renderClozeTest();
+            renderFinalChallenge();
+            updateOverallProgress();
+        });
+    </script>
+</body>
+</html>
